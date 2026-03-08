@@ -1,3 +1,29 @@
 check.command = "clippy"
 check.extraArgs = ["--profile", "test"]
 cargo.targetDir = true
+
+# Disable semantic highlighting for unresolved references
+# This helps with rustlings exercises that have intentional errors
+highlightRelated.exitPoints = false
+highlightRelated.breakPoints = false
+highlightRelated.yieldPoints = false
+highlightRelated.references = false
+
+# Reduce noise from semantic tokens
+semanticHighlighting.operator.specialization.enable = false
+semanticHighlighting.punctuation.specialization.enable = false
+semanticHighlighting.string.specialization.enable = false
+
+# Disable inlay hints that might be distracting
+inlayHints.bindingModeHints.enable = false
+inlayHints.closureReturnTypeHints.enable = "never"
+inlayHints.discriminantHints.enable = "never"
+inlayHints.expressionAdjustmentHints.enable = "never"
+inlayHints.implicitDrops.enable = false
+inlayHints.lifetimeElisionHints.enable = "never"
+inlayHints.parameterHints.enable = false
+inlayHints.rangeExclusiveHints.enable = false
+
+# Diagnostics settings
+diagnostics.experimental.enable = false
+diagnostics.style.enable = false
