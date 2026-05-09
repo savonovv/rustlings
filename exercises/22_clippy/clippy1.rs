@@ -7,9 +7,9 @@
 fn main() {
     // TODO: Fix the Clippy lint in this line.
     let pi = 3.14;
-    let radius: f32 = 5.0;
+    let radius: f64 = 5.0;
 
     let area = pi * radius.powi(2);
 
-    println!("The area of a circle with radius {radius:.2} is {area:.5}");
+    println!("The area of a circle with radius {radius:.2} is {area}"); // f64 to f64, no format needed
 }
